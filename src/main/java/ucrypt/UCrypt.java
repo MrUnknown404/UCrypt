@@ -29,12 +29,7 @@ public class UCrypt {
 		StringBuilder sb = new StringBuilder();
 		
 		for (char c : str.toCharArray()) {
-			int num = (c - r.nextInt(1000)) % 127;
-			
-			if (num < 0) { //TODO FIX!
-				num += 127;
-			}
-			
+			int num = (1270 + c - r.nextInt(1000)) % 127;
 			sb.append((char) num);
 		}
 		
